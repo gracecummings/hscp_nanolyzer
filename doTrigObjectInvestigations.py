@@ -81,19 +81,19 @@ if __name__=="__main__":
     alltrighists.append(ax01[1].hist(ak.flatten(events.TrigObj.eta),bins=np.linspace(-5,5,100)))
     alltrighists.append(ax01[2].hist(ak.flatten(events.TrigObj.phi),bins=np.linspace(-3.14,3.14,100)))
     alltrighists.append(ax11[0].hist(ak.flatten(events.TrigObj.id),bins=np.linspace(0,23,24)))
-    alltrighists.append(ax11[1].hist(ak.num(events.TrigObj.id),bins=np.linspace(0,30,30)))
+    alltrighists.append(ax11[1].hist(ak.num(events.TrigObj.id),bins=np.linspace(0,30,31)))
 
     trigdhists.append(ax02[0].hist(ak.flatten(trgdevnts.TrigObj.pt),bins=np.linspace(0,25000,100)))
     trigdhists.append(ax02[1].hist(ak.flatten(trgdevnts.TrigObj.eta),bins=np.linspace(-5,5,100)))
     trigdhists.append(ax02[2].hist(ak.flatten(trgdevnts.TrigObj.phi),bins=np.linspace(-3.14,3.14,100)))
-    trigdhists.append(ax11[0].hist(ak.flatten(trgdevnts.TrigObj.id),bins=np.linspace(0,23,24)))
-    trigdhists.append(ax12[1].hist(ak.num(trgdevnts.TrigObj.id),bins=np.linspace(0,30,30)))
+    trigdhists.append(ax12[0].hist(ak.flatten(trgdevnts.TrigObj.id),bins=np.linspace(0,23,24)))
+    trigdhists.append(ax12[1].hist(ak.num(trgdevnts.TrigObj.id),bins=np.linspace(0,30,31)))
 
-    divs = []
-    bins = []
-    for i,hist in enmuerate(alltrighists):
-        divs.append(trigdhists[i][0]/hist[0])
-        bins.append(hist[1])
+    #divs = []
+    #bins = []
+    #for i,hist in enmuerate(alltrighists):
+    #    divs.append(trigdhists[i][0]/hist[0])
+    #    bins.append(hist[1])
         
     #fig2, (ax21,ax22) = plt.subplots(nrows=2,ncols=2,figsize=(20,11.25),height_ratios=2)
     
